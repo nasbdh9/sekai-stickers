@@ -11,7 +11,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 
-export default function Info({ open, handleClose, config }) {
+export default function Info({ open, handleClose }) {
   return (
     <div>
       <Dialog
@@ -118,36 +118,6 @@ export default function Info({ open, handleClose, config }) {
                 <ListItemText primary="GitHub" secondary="Source Code" />
               </ListItem>
             </List>
-            <Typography variant="h6" component="h3">
-              The discord bot:
-            </Typography>
-            <List>
-              <ListItem
-                button
-                onClick={() =>
-                  (window.location.href =
-                    "http://link.ayaka.one/stbot")
-                }
-              >
-                <ListItemAvatar>
-                  <Avatar
-                    alt="Discord"
-                    src="https://cdn.discordapp.com/embed/avatars/0.png"
-                  />
-                </ListItemAvatar>
-                <ListItemText
-                  primary="Sekai Stickers"
-                  secondary="Add more fun to your server."
-                />
-              </ListItem>
-            </List>
-            <Typography variant="h6" component="h3">
-              Total stickers made using the app:
-              <br />
-              {config?.global
-                ? config?.global.toLocaleString() + " Sticker"
-                : "not available"}
-            </Typography>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
